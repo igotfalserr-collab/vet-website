@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training Videos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lionel's Vet | Training Videos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Training Videos</h1>
-    <nav>
-      <a href="home.html">Home</a>
+    <nav class="navbar">
+      <h1 class="logo">🐾 Lionel's Vet</h1>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="training.html" class="active">Training</a></li>
+        <li><a href="biosecurity.html">Biosecurity</a></li>
+      </ul>
+      <div class="menu-toggle">☰</div>
     </nav>
   </header>
-  <main>
-    <h2>Video 1: Proper Handwashing</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3PmVJQUCm4E" frameborder="0" allowfullscreen></iframe>
-    <h2>Video 2: Biosecurity Basics</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/XlrxXpc1FxI" frameborder="0" allowfullscreen></iframe>
-  </main>
+
+  <section class="fade-in">
+    <h2>🎥 Training Videos</h2>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Training Video 1"
+              class="video-frame"
+              allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" 
+              title="Training Video 2"
+              class="video-frame"
+              allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Lionel’s Vet Clinic</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
