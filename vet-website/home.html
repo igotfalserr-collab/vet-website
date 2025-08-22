@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lionel's Vet - Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lionel's Vet | Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>Welcome to Lionel's Vet</h1>
-    <nav>
-      <a href="calculator.html">Dilution Calculator</a>
-      <a href="training.html">Training Videos</a>
-      <a href="biosecurity.html">Biosecurity</a>
+    <nav class="navbar">
+      <h1 class="logo">🐾 Lionel's Vet</h1>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="biosecurity.html">Biosecurity</a></li>
+      </ul>
+      <div class="menu-toggle">☰</div>
     </nav>
   </header>
-  <main>
-    <p>Select a section from above to get started.</p>
-  </main>
+
+  <!-- Hero -->
+  <section class="fade-in" id="hero">
+    <h2>Welcome to Lionel’s Vet Clinic</h2>
+    <p>We provide trusted veterinary services and essential biosecurity knowledge.</p>
+  </section>
+
+  <!-- About -->
+  <section class="fade-in">
+    <h2>About Us</h2>
+    <p>Lionel’s Vet is dedicated to animal health, safety, and education. Our tools help professionals and students maintain top biosecurity standards.</p>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="fade-in">
+    <h2>Quick Links</h2>
+    <div class="links-grid">
+      <a href="calculator.html" class="btn">🧪 Dilution Calculator</a>
+      <a href="training.html" class="btn">🎥 Training Videos</a>
+      <a href="biosecurity.html" class="btn">🧼 Biosecurity Guidelines</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Lionel’s Vet Clinic</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
