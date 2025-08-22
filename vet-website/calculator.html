@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dilution Calculator</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lionel's Vet | Dilution Calculator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Dilution Calculator</h1>
-    <nav>
-      <a href="home.html">Home</a>
+    <nav class="navbar">
+      <h1 class="logo">🐾 Lionel's Vet</h1>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="calculator.html" class="active">Calculator</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="biosecurity.html">Biosecurity</a></li>
+      </ul>
+      <div class="menu-toggle">☰</div>
     </nav>
   </header>
-  <main>
-    <label>Concentrate (%): <input type="number" id="concentration" value="10"></label>
-    <label>Final Volume (ml): <input type="number" id="finalVolume" value="1000"></label>
-    <button onclick="calculateDilution()">Calculate</button>
+
+  <section class="fade-in">
+    <h2>🧪 Dilution Calculator</h2>
+    <p>Enter values to calculate the correct dilution:</p>
+    <form id="calc-form">
+      <input type="number" id="concentration" placeholder="Stock Concentration (%)" required />
+      <input type="number" id="desired" placeholder="Desired Concentration (%)" required />
+      <input type="number" id="volume" placeholder="Final Volume (ml)" required />
+      <button type="button" id="calculate" class="btn">Calculate</button>
+    </form>
     <p id="result"></p>
-  </main>
+  </section>
+
+  <footer>
+    <p>© 2025 Lionel’s Vet Clinic</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("calculate").addEventListener("click", () => {
+      const c1 = parseFloat(document.getElementById("concentration").value);
+      const c2 = parseFloat(document.getElementById("desired").value);
+      const v2 = parseFloat(document.getElementById("volume").value);
+
+      if (!c1 || !c2 || !v2) return;
+      const v1 = (c2 * v2) / c1;
+      document.getElementById("result").textContent =
+        `Use ${v1.toFixed(2)} ml of stock solution and top up with water.`;
+    });
+  </script>
 </body>
 </html>
