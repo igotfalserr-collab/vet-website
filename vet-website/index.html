@@ -7,56 +7,61 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">🐾 Lionel's Vet</h1>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#calculator">Calculator</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#biosecurity">Biosecurity</a></li>
-      </ul>
-      <div class="menu-toggle">☰</div>
-    </nav>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Lionel's Vet Clinic</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Sections -->
-  <main>
-    <!-- Home -->
-    <section id="home" class="fade-in">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
       <h2>Welcome to Lionel's Vet Clinic</h2>
-      <p>Your trusted partner in animal health and biosecurity.</p>
-    </section>
+      <p>Providing compassionate care, reliable training, and trusted guidance for all your veterinary needs.</p>
+    </div>
+  </section>
 
-    <!-- Calculator -->
-    <section id="calculator" class="fade-in">
-      <h2>🧪 Dilution Calculator</h2>
-      <p>Quickly calculate the correct dilution for disinfectants and treatments.</p>
-      <a href="calculator.html" class="btn">Go to Calculator</a>
-    </section>
+  <!-- Quick Links -->
+  <section id="quick-links" class="container">
+    <div class="links-grid">
 
-    <!-- Training -->
-    <section id="training" class="fade-in">
-      <h2>🎥 Training Videos</h2>
-      <p>Watch essential training materials for staff and students.</p>
-      <a href="training.html" class="btn">View Training</a>
-    </section>
+      <div class="link-card">
+        <h3>Dilution Calculator</h3>
+        <p>Quickly calculate the correct dilution for disinfectants and treatments with ease.</p>
+        <a href="calculator.html" class="btn">Go to Calculator</a>
+      </div>
 
-    <!-- Biosecurity -->
-    <section id="biosecurity" class="fade-in">
-      <h2>🧼 Biosecurity Guidelines</h2>
-      <p>Learn about best practices to ensure animal and human safety.</p>
-      <a href="biosecurity.html" class="btn">Read Guidelines</a>
-    </section>
-  </main>
+      <div class="link-card">
+        <h3>Training Videos</h3>
+        <p>Watch high-quality training videos designed for staff and students to build essential skills.</p>
+        <a href="training.html" class="btn">View Training</a>
+      </div>
+
+      <div class="link-card">
+        <h3>Biosecurity Guidelines</h3>
+        <p>Learn best practices to protect both animals and humans by following modern biosecurity standards.</p>
+        <a href="guidelines.html" class="btn">Read Guidelines</a>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Lionel’s Vet Clinic</p>
+    <p>&copy; 2025 Lionel's Vet Clinic. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
 
