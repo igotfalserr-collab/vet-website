@@ -3,25 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dilution Calculator</title>
+  <title>Dilution Calculator - Lionel's Vet Clinic</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function calculateDilution() {
+      const stock = parseFloat(document.getElementById('stock').value);
+      const desired = parseFloat(document.getElementById('desired').value);
+      const finalVolume = parseFloat(document.getElementById('finalVolume').value);
+
+      if (isNaN(stock) || isNaN(desired) || isNaN(finalVolume) || stock <= 0 || desired <= 0 || finalVolume <= 0) {
+        document.getElementById('result').innerHTML = "⚠️ Please enter valid positive numbers.";
+        return;
+      }
+
+      if (desired >= stock) {
+        document.getElementById('result').innerHTML = "⚠️ Desired concentration must be less than stock concentration.";
+        return;
+      }
+
+      const stockVolume = (desired / stock) * finalVolume;
+      const diluentVolume = finalVolume - stockVolume;
+
+      document.getElementById('result').innerHTML =
+        `<strong>Result:</strong><br>
+        Stock Solution: ${stockVolume.toFixed(2)} ml<br>
+        Diluent: ${diluentVolume.toFixed(2)} ml`;
+    }
+  </script>
 </head>
 <body>
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">Lionel's Vet Clinic</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Calculator.html" class="active">Calculator</a></li>
+      <li><a href="Training.html">Training</a></li>
+      <li><a href="Guidelines.html">Guidelines</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="calculator-container">
+  <!-- 🔹 Hero section with blue background -->
+  <header class="hero">
     <h1>Dilution Calculator</h1>
-    <p>Enter values below to calculate the correct dilution:</p>
+    <p>Enter your values below to calculate the correct dilution with ease.</p>
+  </header>
 
-    <div class="calculator-bubbles">
-      <input type="number" id="stock" placeholder="Stock Concentration (%)">
-      <input type="number" id="desired" placeholder="Desired Concentration (%)">
-      <input type="number" id="finalVolume" placeholder="Final Volume (ml)">
-      <button id="calculateBtn">Calculate</button>
-    </div>
+  <!-- 🔹 Calculator Card -->
+  <main class="container">
+    <section class="card">
+      <h2>Calculate Your Dilution</h2>
+      <form onsubmit="event.preventDefault(); calculateDilution();" class="form-grid">
+        <input type="number" id="stock" placeholder="Stock Concentration (%)" step="any" required>
+        <input type="number" id="desired" placeholder="Desired Concentration (%)" step="any" required>
+        <input type="number" id="finalVolume" placeholder="Final Volume (ml)" step="any" required>
+        <button type="submit" class="btn">Calculate</button>
+      </form>
+      <p id="result" class="result"></p>
+    </section>
+  </main>
 
-    <div id="result"></div>
-  </div>
-
-  <script src="script.js"></script>
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>© 2025 Lionel's Vet Clinic. All rights reserved.</p>
+  </footer>
 </body>
 </html>
