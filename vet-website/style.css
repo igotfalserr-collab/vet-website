@@ -1,145 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lionel’s Vet Clinic — Compassionate care for every paw</title>
+/* =============================
+   Lionel's Vet - Global Styles
+   ============================= */
 
-  <!-- Tailwind + Inter (Step 1.1) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Sticky Nav -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="flex items-center gap-2 font-semibold text-teal-700">
-        <span class="text-2xl">🐾</span> Lionel’s Vet
-      </a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#services" class="hover:text-teal-700">Services</a>
-        <a href="calculator.html" class="hover:text-teal-700">Dilution Calculator</a>
-        <a href="training.html" class="hover:text-teal-700">Training</a>
-        <a href="biosecurity.html" class="hover:text-teal-700">Biosecurity</a>
-        <a href="#contact" class="hover:text-teal-700">Contact</a>
-      </nav>
-      <a href="mailto:contact@lionelsvet.com"
-         class="inline-flex items-center rounded-full bg-teal-600 text-white px-4 py-2 text-sm shadow hover:bg-teal-700 transition">
-        Book Now
-      </a>
-    </div>
-  </header>
+/* Reset / Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1558944351-c2efb49d1b9b?q=80&w=1470&auto=format&fit=crop"
-         alt="Vet caring for a dog"
-         class="absolute inset-0 w-full h-full object-cover">
-    <div class="relative bg-black/50">
-      <div class="max-w-6xl mx-auto px-4 py-28 text-white">
-        <h1 class="text-4xl md:text-6xl font-bold">Compassionate care for every paw</h1>
-        <p class="mt-4 max-w-2xl text-lg opacity-90">
-          From routine checkups to emergency care, Lionel’s Vet Clinic treats your pets like family.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#services" class="rounded-full bg-white text-teal-700 font-semibold px-6 py-3">View Services</a>
-          <a href="mailto:contact@lionelsvet.com" class="rounded-full ring-1 ring-white/80 px-6 py-3">Book Appointment</a>
-        </div>
-      </div>
-    </div>
-  </section>
+body {
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
-  <!-- Services -->
-  <section id="services" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-gray-900">Our Services</h2>
-    <p class="text-gray-600 mt-1">Full-service care for dogs, cats, and small animals.</p>
+/* Navbar */
+header {
+  background: #1e3a8a; /* Deep blue */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-      <!-- Card 1 -->
-      <div class="rounded-2xl bg-white p-6 shadow-sm border hover:shadow-md transition">
-        <div class="text-teal-600 text-3xl">🩺</div>
-        <h3 class="font-semibold mt-3">General Checkups</h3>
-        <p class="text-sm text-gray-600 mt-2">Annual wellness exams, diagnostics & health plans.</p>
-      </div>
-      <!-- Card 2 -->
-      <div class="rounded-2xl bg-white p-6 shadow-sm border hover:shadow-md transition">
-        <div class="text-teal-600 text-3xl">💉</div>
-        <h3 class="font-semibold mt-3">Vaccinations</h3>
-        <p class="text-sm text-gray-600 mt-2">Core & lifestyle vaccines tailored to your pet.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="rounded-2xl bg-white p-6 shadow-sm border hover:shadow-md transition">
-        <div class="text-teal-600 text-3xl">🚑</div>
-        <h3 class="font-semibold mt-3">Emergency Care</h3>
-        <p class="text-sm text-gray-600 mt-2">Urgent and after-hours stabilization & triage.</p>
-      </div>
-      <!-- Card 4 -->
-      <div class="rounded-2xl bg-white p-6 shadow-sm border hover:shadow-md transition">
-        <div class="text-teal-600 text-3xl">🍽️</div>
-        <h3 class="font-semibold mt-3">Nutrition Advice</h3>
-        <p class="text-sm text-gray-600 mt-2">Diet plans, weight management & supplements.</p>
-      </div>
-    </div>
-  </section>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <!-- Testimonials -->
-  <section class="bg-white border-y">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold">Happy Clients</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <blockquote class="rounded-2xl border p-6 shadow-sm">
-          “Best care in town. The team treated Bella like royalty!”  
-          <div class="mt-3 text-sm text-gray-500">— Sam R.</div>
-        </blockquote>
-        <blockquote class="rounded-2xl border p-6 shadow-sm">
-          “Quick, kind, and super knowledgeable. Highly recommend.”  
-          <div class="mt-3 text-sm text-gray-500">— Priya K.</div>
-        </blockquote>
-        <blockquote class="rounded-2xl border p-6 shadow-sm">
-          “They explained everything and calmed our nerves. 10/10.”  
-          <div class="mt-3 text-sm text-gray-500">— Marco D.</div>
-        </blockquote>
-      </div>
-    </div>
-  </section>
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-3xl font-bold">Contact Us</h2>
-        <p class="text-gray-600 mt-2">We’re here Mon–Sat, 8am–6pm.</p>
-        <ul class="mt-4 space-y-2 text-gray-700">
-          <li>📧 <a class="text-teal-700 underline" href="mailto:contact@lionelsvet.com">contact@lionelsvet.com</a></li>
-          <li>📞 <a class="text-teal-700 underline" href="tel:+1234567890">+123 456 7890</a></li>
-          <li>📍 123 Pet Avenue, Cape Town</li>
-        </ul>
-      </div>
-      <iframe
-        class="w-full h-64 rounded-2xl border"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=Cape%20Town&t=&z=12&ie=UTF8&iwloc=&output=embed">
-      </iframe>
-    </div>
-  </section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-wrap items-center justify-between gap-4">
-      <div>© <span id="y"></span> Lionel’s Vet Clinic</div>
-      <div class="flex gap-4">
-        <a href="biosecurity.html" class="hover:text-teal-700">Biosecurity</a>
-        <a href="training.html" class="hover:text-teal-700">Training</a>
-        <a href="calculator.html" class="hover:text-teal-700">Dilution Calculator</a>
-      </div>
-    </div>
-  </footer>
+.nav-links li a {
+  color: #e0e7ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #facc15; /* Yellow highlight */
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e3a8a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Hero & Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Quick Links Grid */
+.links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #facc15;
+  color: #1e3a8a;
+}
+
+/* Calculator Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+form input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#result {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #1e3a8a;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.video-frame {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Biosecurity List */
+.guidelines {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+.guidelines li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
