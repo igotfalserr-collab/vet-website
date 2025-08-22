@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Tailwind CSS (CDN) + Inter font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  :root { --brand: #0d9488; } /* teal-600 */
-  html,body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lionel's Vet Clinic</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <h1>Welcome to Lionel's Vet Clinic</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <h1 class="logo">🐾 Lionel's Vet</h1>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#biosecurity">Biosecurity</a></li>
+      </ul>
+      <div class="menu-toggle">☰</div>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We care for your pets like family. From checkups to emergencies, Lionel's Vet Clinic is here for you.</p>
-  </section>
+  <!-- Sections -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="fade-in">
+      <h2>Welcome to Lionel's Vet Clinic</h2>
+      <p>Your trusted partner in animal health and biosecurity.</p>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>General Checkups</li>
-      <li>Vaccinations</li>
-      <li>Emergency Care</li>
-      <li>Pet Nutrition Advice</li>
-    </ul>
-  </section>
+    <!-- Calculator -->
+    <section id="calculator" class="fade-in">
+      <h2>🧪 Dilution Calculator</h2>
+      <p>Quickly calculate the correct dilution for disinfectants and treatments.</p>
+      <a href="calculator.html" class="btn">Go to Calculator</a>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@lionelsvet.com</p>
-    <p>Phone: +123 456 7890</p>
-  </section>
+    <!-- Training -->
+    <section id="training" class="fade-in">
+      <h2>🎥 Training Videos</h2>
+      <p>Watch essential training materials for staff and students.</p>
+      <a href="training.html" class="btn">View Training</a>
+    </section>
 
+    <!-- Biosecurity -->
+    <section id="biosecurity" class="fade-in">
+      <h2>🧼 Biosecurity Guidelines</h2>
+      <p>Learn about best practices to ensure animal and human safety.</p>
+      <a href="biosecurity.html" class="btn">Read Guidelines</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Lionel's Vet Clinic</p>
+    <p>© 2025 Lionel’s Vet Clinic</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
+
