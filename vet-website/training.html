@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lionel's Vet | Training Videos</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Videos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">🐾 Lionel's Vet</h1>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-        <li><a href="training.html" class="active">Training</a></li>
-        <li><a href="biosecurity.html">Biosecurity</a></li>
-      </ul>
-      <div class="menu-toggle">☰</div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Lionel's Vet Clinic</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Calculator.html">Calculator</a></li>
+      <li><a href="Training.html" class="active">Training</a></li>
+      <li><a href="#">Biosecurity</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Training Resources</h1>
+    <p>Watch training videos and learn best practices for veterinary care, cleaning, and biosecurity.</p>
   </header>
 
-  <section class="fade-in">
-    <h2>🎥 Training Videos</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="Training Video 1"
-              class="video-frame"
-              allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" 
-              title="Training Video 2"
-              class="video-frame"
-              allowfullscreen></iframe>
-    </div>
-  </section>
+  <!-- Training Section -->
+  <main class="content-container">
+    <section class="card">
+      <h2>Disinfection Training</h2>
+      <div class="video-grid">
+        <div class="video-box">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Training Video" frameborder="0" allowfullscreen></iframe>
+          <p class="video-title">Proper Use of Disinfectants</p>
+        </div>
+        <div class="video-box">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/9bZkp7q19f0" 
+            title="Training Video" frameborder="0" allowfullscreen></iframe>
+          <p class="video-title">Mixing Solutions Safely</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Lionel’s Vet Clinic</p>
+    <section class="card">
+      <h2>Biosecurity Training</h2>
+      <div class="video-grid">
+        <div class="video-box">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/ysz5S6PUM-U" 
+            title="Training Video" frameborder="0" allowfullscreen></iframe>
+          <p class="video-title">Farm Biosecurity Basics</p>
+        </div>
+        <div class="video-box">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/VYOjWnS4cMY" 
+            title="Training Video" frameborder="0" allowfullscreen></iframe>
+          <p class="video-title">Preventing Disease Spread</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Lionel's Vet Clinic | Training Resources</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
+
